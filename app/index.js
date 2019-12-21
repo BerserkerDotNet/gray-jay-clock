@@ -1,9 +1,16 @@
+import * as kpay from './kpay/release/kpay.js';
+import * as kpay_common from '../common/kpay/kpay_common.js';
+import './kpay/release/kpay_filetransfer.js';
+import './kpay/release/kpay_dialogs.js';
+import './kpay/release/kpay_time_trial.js';
 import clock from "clock";
 import document from "document";
 import { preferences } from "user-settings";
 import { HeartRateSensor } from "heart-rate";
 import { today } from "user-activity";
 import { display } from "display";
+
+kpay.initialize();
 
 // Update the clock every minute
 clock.granularity = "minutes";
